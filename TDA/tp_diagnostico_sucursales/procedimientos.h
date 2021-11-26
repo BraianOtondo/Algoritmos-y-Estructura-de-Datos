@@ -7,6 +7,8 @@ typedef enum Zona ZONA;
 void Salir();
 //PROCEDIMIENTO PARA ELEGIR LA ZONA CON MENU
 ZONA ElegirZona();
+//PROCEDIMIENTO PARA GENERAR ID
+int GenerarId();
 
 
 

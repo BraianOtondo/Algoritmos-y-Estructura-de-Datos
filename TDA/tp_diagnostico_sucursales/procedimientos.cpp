@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include "procedimientos.h"
+using namespace std;
 void Salir(){
 cout<<"Gracias por usar el programa..."<<endl;
 system ("pause");
@@ -35,4 +37,18 @@ int opcion;
         }
     }while(opcion==0);
 return zona;
+}
+int GenerarId(){
+int id;
+cout<<"Ingrese ID de la sucursal"<<endl;
+cin>>id;
+    while((id<100)||(id>999)){
+    cout<<"Por favor ingrese otro ID..."<<endl;
+    system("pause");
+    system("cls");
+    cout<<"Ingrese ID de la sucursal"<<endl;
+    cin>>id;
+
+    }
+    return id;
 }

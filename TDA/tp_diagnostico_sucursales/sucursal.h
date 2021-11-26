@@ -1,6 +1,13 @@
 #ifndef SUCURSAL_H_INCLUDED
 #define SUCURSAL_H_INCLUDED
-#include"procedimientos.h"
+enum Zona{norte=1,sur=2,este=3,oeste=4,centro=5};
+typedef enum Zona ZONA;
+//PROCEDIMIENTO PARA SALIR DEL MENU
+void Salir();
+//PROCEDIMIENTO PARA ELEGIR LA ZONA CON MENU
+ZONA ElegirZona();
+//PROCEDIMIENTO PARA GENERAR ID
+int GenerarId();
 //STRUCT
 struct StructSucursal{
 int id;
