@@ -1,41 +1,6 @@
 #include <iostream>
-#include <stdlib.h>
-#include<string.h>
-#include "sucursal.h"
-
+#include "procedimientos.h"
 using namespace std;
-SUCURSAL CrearSucursal(){
-int id;
-char direccion[50];
-ZONA zona;
-float factura;
-SUCURSAL sucursal=new StructSucursal;
-cout<<"Ingrese Id: "<<endl;
-cin>>id;
-setId(sucursal,id);
-cout<<"Ingrese Direccion: "<<endl;
-cin>>direccion;
-setDireccion(sucursal,direccion);
-setZona(sucursal,ElegirZona());
-cout<<"Ingrese factura"<<endl;
-cin>>factura;
-setFactura(sucursal,factura);
-return sucursal;
-}
-
-void setId(SUCURSAL sucursal,int id){
-sucursal->id=id;
-}
-void setDireccion(SUCURSAL sucursal,const char direccion[]){
-strcpy(sucursal->direccion,direccion);
-}
-void setZona(SUCURSAL sucursal,ZONA zona){
-sucursal->zona=zona;
-}
-void setFactura(SUCURSAL sucursal,float factura){
-sucursal->factura=factura;
-}
-
 void Salir(){
 cout<<"Gracias por usar el programa..."<<endl;
 system ("pause");
@@ -45,7 +10,7 @@ ZONA ElegirZona(){
 ZONA zona;
 int opcion;
 
-    do{
+    while(opcion==0){
         cout<<"Ingrese una opcion: "<<endl;
         cout<<"0.Salir"<<endl;
         cout<<"1.Norte"<<endl;
@@ -62,13 +27,13 @@ int opcion;
         case 4:zona=oeste;break;
         case 5:zona=centro;break;
         default:
-        printf("Ingrese bien las opciones..\n");
+        cout<<"Ingrese bien las opciones.."<<endl;
         system("pause");
         system("cls");
         break;
 
         }
-    }while(opcion==0);
+    }
 return zona;
 }
 int GenerarId(){
@@ -85,3 +50,15 @@ cin>>id;
     }
     return id;
 }
+int Opcion(){
+    int opcion;
+        cout<<"Ingrese una opcion: "<<endl;
+        cout<<"0.Salir"<<endl;
+        cout<<"1.Cargar Sucursal"<<endl;
+        cout<<"2.Listado total de por zona"<<endl;
+        cout<<"3.Minimo de sucursal"<<endl;
+        cout<<"4.Maximo de sucursal"<<endl;
+        cin>>opcion;
+    return opcion;
+}
+

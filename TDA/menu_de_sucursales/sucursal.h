@@ -1,13 +1,6 @@
 #ifndef SUCURSAL_H_INCLUDED
 #define SUCURSAL_H_INCLUDED
-enum Zona{norte=1,sur=2,este=3,oeste=4,centro=5};
-typedef enum Zona ZONA;
-//PROCEDIMIENTO PARA SALIR DEL MENU
-void Salir();
-//PROCEDIMIENTO PARA ELEGIR LA ZONA CON MENU
-ZONA ElegirZona();
-//PROCEDIMIENTO PARA GENERAR ID
-int GenerarId();
+#include "procedimientos.h"
 //STRUCT
 struct StructSucursal{
 int id;
@@ -30,6 +23,12 @@ int GetId(SUCURSAL sucursal);
 char *GetDireccion(SUCURSAL sucursal);
 ZONA GetZona(SUCURSAL sucursal);
 float GetFactura(SUCURSAL sucursal);
+//
+
 //MOSTRAR
 void MostrarSucursal(SUCURSAL sucursal);
+
+void ListadoTotal(SUCURSAL sucursal[],int cant);
+float MinimoSucursal(SUCURSAL sucursal[],int cant,int *pos);
+float MaximoSucursal(SUCURSAL sucursal[],int cant,int *pos);
 #endif // SUCURSAL_H_INCLUDED

@@ -10,6 +10,6 @@ ZONA ElegirZona();
 //PROCEDIMIENTO PARA GENERAR ID
 int GenerarId();
 
-
+int Opcion();
 
 #endif // PROCEDIMIENTOS_H_INCLUDED
