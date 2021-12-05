@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1638300641 source:e:\algoritmos y estructura de datos\tda\menu_de_sucursales\main.cpp
+	<iostream>
+	"sucursal.h"
+	"procedimientos.h"
+	<stdlib.h>
+
+1638254331 source:e:\algoritmos y estructura de datos\tda\menu_de_sucursales\procedimientos.cpp
+	<iostream>
+	"procedimientos.h"
+
+1637951521 e:\algoritmos y estructura de datos\tda\menu_de_sucursales\procedimientos.h
+
+1638300638 e:\algoritmos y estructura de datos\tda\menu_de_sucursales\sucursal.h
+	"procedimientos.h"
+
+1638300830 source:e:\algoritmos y estructura de datos\tda\menu_de_sucursales\sucursal.cpp
+	<iostream>
+	<string.h>
+	"sucursal.h"
+
+1638738009 source:e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\menu_de_sucursales\main.cpp
+	<iostream>
+	<stdbool.h>
+	"sucursal.h"
+	<stdlib.h>
+	"lista.h"
+
+1638736796 e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\menu_de_sucursales\sucursal.h
+
+1638316573 e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\menu_de_sucursales\procedimientos.h
+
+1638736490 source:e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\menu_de_sucursales\sucursal.cpp
+	<iostream>
+	<string.h>
+	<stdbool.h>
+	"sucursal.h"
+
+1638316503 source:e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\menu_de_sucursales\procedimientos.cpp
+	<iostream>
+	"procedimientos.h"
+	<stdbool.h>
+
+1638668768 e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\menu_de_sucursales\lista.h
+	"sucursal.h"
+
+1638668704 source:e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\menu_de_sucursales\lista.cpp
+	"lista.h"
+	<stdbool.h>
+
