@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1638904263 source:e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\numeros_enteros\main.cpp
+	<iostream>
+	"lista.h"
+
+1638904412 e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\numeros_enteros\lista.h
+
+1638835604 source:e:\algoritmos y estructura de datos\estructura de datos\listas enlazadas\numeros_enteros\lista.cpp
+	<iostream>
+	<stdbool.h>
+	"lista.h"
+
