@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1639236069 source:e:\algoritmos y estructura de datos\estructura de datos\pilas\cola_enteros\main.cpp
+	<iostream>
+	"cola.h"
+
+1639236039 source:e:\algoritmos y estructura de datos\estructura de datos\pilas\cola_enteros\cola.cpp
+	"cola.h"
+
+1639235073 e:\algoritmos y estructura de datos\estructura de datos\pilas\cola_enteros\cola.h
+	<iostream>
+	<stdbool.h>
+
