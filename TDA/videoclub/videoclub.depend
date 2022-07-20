@@ -1,14 +1,13 @@
 # depslib dependency file v1.0
-1658259428 source:e:\algoritmos y estructura de datos\tda\videoclub\main.cpp
-	<iostream>
-	"listado.cpp"
+1658345025 source:e:\algoritmos y estructura de datos\tda\videoclub\listado.cpp
+	"listado.h"
 
-1658259223 e:\algoritmos y estructura de datos\tda\videoclub\listado.h
+1658345357 e:\algoritmos y estructura de datos\tda\videoclub\listado.h
+	<string.h>
+	<iostream>
+
+1658345275 source:e:\algoritmos y estructura de datos\tda\videoclub\main.cpp
+	"listado.h"
 	<iostream>
 	<stdbool.h>
-	<string.h>
-
-1658259679 e:\algoritmos y estructura de datos\tda\videoclub\listado.cpp
-	"listado.h"
-	<string.h>
 

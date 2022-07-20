@@ -1,7 +1,4 @@
 #include "listado.h"
-#include<string.h>
-using namespace std;
-
 LISTADO CrearListado(bool tipo,const char nombre[],const char genero[],int anio,int ranking,bool visto, const char usuario[]){
 LISTADO listado=new StructListado;
 SetTipo(listado,tipo);
@@ -55,8 +52,8 @@ return listado->visto;
 char *GetUsuario(LISTADO listado){
 return listado->usuario;
 }
-void MostrarListado(LISTADO listado[],int n){
 
+void MostrarListadoCompleto(LISTADO listado[],int n){
 for(int i=0;i<n;i++){
 cout<<"Usuario: "<<GetUsuario(listado[i])<<endl;
 cout<<"Pelicla/Serie: "<<GetNombre(listado[i])<<endl;
@@ -67,16 +64,46 @@ cout<<"Ranking: "<<GetRanking(listado[i])<<endl;
 cout<<"Anio: "<<GetAnio(listado[i])<<endl;
 cout<<"-------------------------------------------"<<endl;
 }
+}
+
+void MostrarListado(LISTADO listado){
+
+cout<<"Usuario: "<<GetUsuario(listado)<<endl;
+cout<<"Pelicla/Serie: "<<GetNombre(listado)<<endl;
+cout<<"Genero: "<<GetGenero(listado)<<endl;
+cout<<"Tipo: "<<TipoPelicula(GetTipo(listado))<<endl;
+cout<<"Visto: "<<GetVisto(listado)<<endl;
+cout<<"Ranking: "<<GetRanking(listado)<<endl;
+cout<<"Anio: "<<GetAnio(listado)<<endl;
+cout<<"-------------------------------------------"<<endl;
 
 
 }
+void MostrarListadoPeliculas(LISTADO listado[],int n){
+for(int i=0;i<n;i++){
+        if(GetTipo(listado[i])==true){
+         MostrarListado(listado[i]);
+        }
+}
+
+}
+
+void MostrarListadoSeries(LISTADO listado[],int n){
+for(int i=0;i<n;i++){
+        if(GetTipo(listado[i])==false){
+         MostrarListado(listado[i]);
+        }
+}
+
+}
+
 const char *TipoPelicula(bool tipo){
 if(tipo==true){
 return "Pelicula";
 }
 return "Serie";
 }
-void OrdenarPorCaracteresAscentente(LISTADO listado[],int n){
+void OrdenarGeneroAscentente(LISTADO listado[],int n){
 int i,j,minimo;
 LISTADO aux=nullptr;
 for(i=0;i<n;i++){
@@ -91,7 +118,81 @@ for(i=0;i<n;i++){
     listado[i]=aux;
 }
 
-    MostrarListado(listado,n);
+}
 
+void OrdenarGeneroDescentente(LISTADO listado[],int n){
+int i,j,minimo;
+LISTADO aux=nullptr;
+for(i=0;i<n;i++){
+    minimo=i;
+    for(j=i+1;j<n;j++){
+        if(strcmp(GetGenero(listado[j]),GetGenero(listado[minimo]))==1){
+        minimo=j;
+        }
+    }
+    aux=listado[minimo];
+    listado[minimo]=listado[i];
+    listado[i]=aux;
+}
 
+}
+void OrdenarAnioAscendente(LISTADO listado[],int n){
+int i,j,minimo;
+LISTADO aux=nullptr;
+    for(i=0;i<n;i++){
+        minimo=i;
+        for(j=i+1;j<n;j++){
+            if(GetAnio(listado[j])<GetAnio(listado[minimo])){
+                minimo=j;
+            }
+        }
+        aux=listado[minimo];
+        listado[minimo]=listado[i];
+        listado[i]=aux;
+    }
+}
+void OrdenarAnioDescendente(LISTADO listado[],int n){
+int i,j,minimo;
+LISTADO aux=nullptr;
+    for(i=0;i<n;i++){
+        minimo=i;
+        for(j=i+1;j<n;j++){
+            if(GetAnio(listado[j])>GetAnio(listado[minimo])){
+                minimo=j;
+            }
+        }
+        aux=listado[minimo];
+        listado[minimo]=listado[i];
+        listado[i]=aux;
+    }
+}
+void OrdenarRankingAscendente(LISTADO listado[],int n){
+int i,j,minimo;
+LISTADO aux=nullptr;
+for(i=0;i<n;i++){
+    minimo=i;
+    for(j=i+1;j<n;j++){
+        if(GetRanking(listado[j])<GetRanking(listado[minimo])){
+            minimo=j;
+        }
+    }
+    aux=listado[minimo];
+    listado[minimo]=listado[i];
+    listado[i]=aux;
+}
+}
+void OrdenarRankingDescendente(LISTADO listado[],int n){
+int i,j,minimo;
+LISTADO aux=nullptr;
+for(i=0;i<n;i++){
+    minimo=i;
+    for(j=i+1;j<n;j++){
+        if(GetRanking(listado[j])>GetRanking(listado[minimo])){
+            minimo=j;
+        }
+    }
+    aux=listado[minimo];
+    listado[minimo]=listado[i];
+    listado[i]=aux;
+}
 }

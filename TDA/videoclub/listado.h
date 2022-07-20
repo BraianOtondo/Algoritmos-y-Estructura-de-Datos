@@ -1,9 +1,10 @@
 #ifndef LISTADO_H_INCLUDED
 #define LISTADO_H_INCLUDED
+
+#include<string.h>
 #include <iostream>
-#include <stdbool.h>
-#include <string.h>
-//#include <time.h>
+using namespace std;
+
 struct StructListado{
 bool tipo; //pelicula o serie
 char nombre[30];
@@ -32,7 +33,16 @@ bool GetVisto(LISTADO listado);
 char *GetUsuario(LISTADO listado);
 
 const char *TipoPelicula(bool tipo);
-void OrdenarPorCaracteresAscentente(LISTADO listado[],int n);
+void OrdenarGeneroAscentente(LISTADO listado[],int n);
+void OrdenarAnioAscendente(LISTADO listado[],int n);
+void OrdenarRankingAscendente(LISTADO listado[],int n);
+void OrdenarRankingDescendente(LISTADO listado[],int n);
+void OrdenarAnioDescendente(LISTADO listado[],int n);
+void OrdenarGeneroDescentente(LISTADO listado[],int n);
 
 void MostrarListado(LISTADO listado);
+void MostrarListadoCompleto(LISTADO listado[],int n);
+
+void MostrarListadoPeliculas(LISTADO listado[],int n);
+void MostrarListadoSeries(LISTADO listado[],int n);
 #endif // LISTADO_H_INCLUDED
